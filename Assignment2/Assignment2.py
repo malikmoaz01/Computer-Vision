@@ -43,7 +43,6 @@ def gray_level_slicing(image, min_val, max_val):
     display_images(image, sliced, "Original", "Gray-Level Slicing")
     return sliced
 
-# 5. Bit-Plane Slicing
 def bit_plane_slicing(image, bit_plane):
     sliced = np.bitwise_and(image, 1 << bit_plane)
     sliced = np.where(sliced > 0, 255, 0)
