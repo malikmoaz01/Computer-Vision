@@ -8,12 +8,10 @@ def display_images(original, transformed, title1="Original", title2="Transformed
     plt.imshow(original, cmap='gray')
     plt.title(title1)
     plt.axis('off')
-    
     plt.subplot(1, 2, 2)
     plt.imshow(transformed, cmap='gray')
     plt.title(title2)
     plt.axis('off')
-    
     plt.show()
 
 def image_negative(image):
