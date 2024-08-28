@@ -4,7 +4,7 @@ import os
 
 
 try :
-  image_path = r"C:\Users\Malik Moaz\Desktop\Computer Vision\img.jpg"
+  image_path = r"img.jpg"
   image = Image.open(image_path)
 
   image_width,image_weight = image.size
