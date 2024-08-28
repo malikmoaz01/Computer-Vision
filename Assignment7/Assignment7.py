@@ -31,8 +31,10 @@ def edge_detection(image, method):
 
     edge_image = (edge_image / np.max(edge_image)) * 255
     edge_image = edge_image.astype(np.uint8)
-    
+
     return edge_image
+
+
 
 if __name__ == "__main__":
     image = cv2.imread('sample_image.webp', cv2.IMREAD_GRAYSCALE)
