@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Function to display images side by side
 def display_images(original, transformed, title1="Original", title2="Transformed"):
     plt.figure(figsize=(10, 5))
     plt.subplot(1, 2, 1)
