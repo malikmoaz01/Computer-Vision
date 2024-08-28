@@ -5,14 +5,12 @@ def canny_edge_detection(image, low_threshold, high_threshold):
     blurred_image = cv2.GaussianBlur(image, (5, 5), 1.4)
     sobel_x = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
     sobel_y = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
-    
     grad_x = cv2.filter2D(blurred_image, cv2.CV_64F, sobel_x)
     grad_y = cv2.filter2D(blurred_image, cv2.CV_64F, sobel_y)
-    
     magnitude = np.sqrt(grad_x**2 + grad_y**2)
     direction = np.arctan2(grad_y, grad_x) * 180 / np.pi
     direction = np.abs(direction) % 180
-    
+          
     suppressed_image = np.zeros_like(magnitude, dtype=np.uint8)
     
     for i in range(1, magnitude.shape[0] - 1):
