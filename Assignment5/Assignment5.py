@@ -8,7 +8,6 @@ def display_images(original, filtered, title1="Original", title2="Filtered"):
     plt.imshow(original, cmap='gray')
     plt.title(title1)
     plt.axis('off')
-    
     plt.subplot(1, 2, 2)
     plt.imshow(filtered, cmap='gray')
     plt.title(title2)
