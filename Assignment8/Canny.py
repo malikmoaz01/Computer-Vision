@@ -52,6 +52,8 @@ def canny_edge_detection(image, low_threshold, high_threshold):
     
     return final_edges
 
+
+
 if __name__ == "__main__":
     image = cv2.imread('sample_image.webp', cv2.IMREAD_GRAYSCALE)
     edges = canny_edge_detection(image, 50, 150)
