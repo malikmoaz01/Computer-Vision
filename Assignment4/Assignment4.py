@@ -8,7 +8,7 @@ def histogram_matching(image, reference_image):
     hist_image = hist_image.ravel()
     hist_ref = hist_ref.ravel()
 
-    cdf_image = hist_image.cumsum()
+    cdf_image = hist_image.cumsum() 
     cdf_ref = hist_ref.cumsum()
     cdf_image_normalized = cdf_image / cdf_image[-1]
     cdf_ref_normalized = cdf_ref / cdf_ref[-1]
@@ -22,11 +22,9 @@ def histogram_matching(image, reference_image):
     plt.subplot(1, 2, 1)
     plt.hist(image.ravel(), bins=256, range=[0, 256], color='black')
     plt.title('Histogram of Original Image')
-
     plt.subplot(1, 2, 2)
     plt.hist(matched_image.ravel(), bins=256, range=[0, 256], color='black')
     plt.title('Histogram of Matched Image')
-
     plt.show()
 
     return matched_image
