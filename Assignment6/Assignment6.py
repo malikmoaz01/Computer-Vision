@@ -84,5 +84,7 @@ def main():
     unsharp_masking(image)
     high_boost_filtering(image)
 
+
+
 if __name__ == "__main__":
     main()
