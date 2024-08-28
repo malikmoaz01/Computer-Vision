@@ -16,11 +16,9 @@ def histogram_equalization(image):
     plt.subplot(1, 2, 1)
     plt.hist(image.ravel(), bins=256, range=[0, 256], color='black')
     plt.title('Histogram of Original Image')
-
     plt.subplot(1, 2, 2)
     plt.hist(equalized_image.ravel(), bins=256, range=[0, 256], color='black')
     plt.title('Histogram of Equalized Image')
-
     plt.show()
 
     return equalized_image
